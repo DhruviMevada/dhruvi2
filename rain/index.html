@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+          width: 100vw;
+          height: 100vh;
+          background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1ff2aa10018867.560e05e3d4ef2.jpg");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+        .rain{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://www.transparentpng.com/thumb/rain/rpymqz-editing-rain-manipulation-editing-background-download.png");
+            animation: raining 0.5s linear infinite;
+        }
+        @keyframes raining{
+          0%{
+            background-position: 100% 0%;
+          }  
+          100%{
+            background-position: 90% 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="rain"></div>
+</body>
+</html>
