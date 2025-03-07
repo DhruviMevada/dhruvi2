@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>carousal</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  html{
+    font-size: 62.5%;
+  }
+
+  .container-img{
+    width: 60vw;
+    height: 50rem;
+    border-radius: 1rem;
+    box-shadow: rgba(5, 5, 32, 0.2) 0px 10px 29px 0px;
+
+    background-image: url("https://th.bing.com/th/id/R.8c7bd339217bf76e0087add6ee6a33c5?rik=1%2fUoNcqqIfTiXw&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-images..jpg&ehk=%2fG27fwqbQI%2fi%2bxgGclM1BHuObngpvsp27tc36F59T9c%3d&risl=&pid=ImgRaw&r=0");
+    background-size: cover;
+    animation: gallery 20s linear infinite;
+  }
+  @keyframes gallery {
+    0%{
+      background-image: url("https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?cs=srgb&dl=snow-landscape-mountains-443446.jpg&fm=jpg");
+      background-size: cover;
+    }
+
+    20%{
+      background-image: url("https://th.bing.com/th/id/OIP.1gqxePGrU4JMYrWZJy1XaQAAAA?rs=1&pid=ImgDetMain");
+      background-size: cover;
+    }
+
+    40%{
+      background-image: url("https://th.bing.com/th/id/R.3d88a927f8529dcba03364b09d98adbe?rik=JYmQaMVSULpYQg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-images.jpg&ehk=BNPsuSOUR7ATZ3EpRwxx1xFl7LUbO3tYlu1wFLCBrCE%3d&risl=&pid=ImgRaw&r=0");
+      background-size: cover;
+    }
+
+    60%{
+      background-image: url("https://th.bing.com/th/id/R.b5b7b64e6e73d3ebca2c79aa26a8ae69?rik=hDv1mZReWP%2fDrA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-1VRRliT7hCo%2fVCZxCsKtknI%2fAAAAAAAAEpc%2fZXEfspcVs3Q%2fs1600%2fnatural-nature-backgrounds-1.jpg&ehk=z3nZNTzeSgmsJRnrGOniu5sJUNVxWIO0cQ2JysmiGxU%3d&risl=&pid=ImgRaw&r=0");
+      background-size: cover;
+    }
+
+    80%{
+      background-image: url("https://wallup.net/wp-content/uploads/2016/02/18/286992-nature-colorful-photography.jpg");
+      background-size: cover;
+    }
+
+    100%{
+      background-image: url("https://th.bing.com/th/id/R.cac1b9d769ffae13b62bf9d913df4d6e?rik=bbjlMutEfcAB3Q&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fdvbKFz3.jpg&ehk=NkSlvWE1X3dq%2bPKX268Kb1oP7XRCRBaam%2f9gblHsOxg%3d&risl=&pid=ImgRaw&r=0");
+      background-size: cover;
+    }
+    
+  }
+</style>
+<body>
+   <div class="container-img"></div>
+</body>
+</html>
