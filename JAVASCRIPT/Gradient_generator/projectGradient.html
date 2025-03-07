@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient-generator</title>
+    <link rel="icon" href="queen.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&family=Playwrite+IS:wght@100..400&family=Playwrite+NL:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: blanchedalmond;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .CopyCode {
+            margin: 0 auto;
+            /* display: block; */
+            line-height: 1.4;
+            letter-spacing: 0.2px;
+            border-left: 3px solid #fff;
+            background-color: rgba(189, 189, 189, 0.1);
+            padding: 15px 8px 15px 17px;
+            border-radius: 5px;
+        }
+
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to right top,
+                    #051937,
+                    #004d7a,
+                    #008793,
+                    #00bf72,
+                    #a8eb12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #myButton1,
+        #myButton2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #fff;
+            /* Text color */
+            font-size: 16px;
+            border: none;
+            /* Remove border */
+            cursor: pointer;
+        }
+
+        h2 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <button id="myButton1" style="background-color: #004d7a">#004d7a</button>
+            <button id="myButton2" style="background-color: #91F74D">#91F74D</button>
+        </div>
+        <h2>Copy your Code Here</h2>
+        <div class="CopyCode">
+            background-image: linear-gradient(to right, rgb(92, 145, 229), rgb(152,
+            63, 198))
+        </div>
+    </section>
+    <script>
+        let btn1 = document.getElementById("myButton1");
+        let btn2 = document.getElementById("myButton2");
+        let copyDiv = document.querySelector(".CopyCode");
+        let rgb1 = "#004773";
+        let rgb2 = "#54d542";
+
+        const hexvalues = () => {
+            let myHexValues = "0123456789abcdef";
+            let colors = "#";
+            for(let i = 0; i < 6; i++){
+                colors = colors + myHexValues[Math.floor(Math.random() * 16)];
+            }
+            return colors;
+        }
+
+        const handleButton1 = () => {
+            rgb1 = hexvalues();
+            console.log(rgb1); 
+            btn1.innerText = rgb1; 
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})` ;
+            copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2})`;
+        };
+
+        const handleButton2 = () => {
+            rgb2 = hexvalues();
+            console.log(rgb2); 
+            btn2.innerText = rgb2;
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})` ;
+            copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2})`;  
+        };
+
+        btn1.addEventListener("click",handleButton1);
+        btn2.addEventListener("click",handleButton2);
+        // THIS IS FOR COPY THE CODE:
+        copyDiv.addEventListener("click", () =>{
+            navigator.clipboard.writeText(copyDiv.innerText);
+            alert("Your code is copied!!");
+        })
+
+        
+    </script>
+</body>
+
+</html>
